@@ -1,0 +1,18 @@
+\documentclass[]{article}
+\linespread{2}
+\title{INF-2710 Assignment 2: Research Question - First draft}
+\author{Guilherme Gon\c{c}alves Schardong - 1412728}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Research Question}: Given a large set of models, how can a statistically significant subset be selected, such that analysis tasks done with the subset are equivalent to using the original set?
+
+By helping the user select a few models from an ensemble of possibly thousands of models, the task of analyzing the ensemble's behavior becomes much simpler. In some areas of application, such as the oil \& gas industry, these ensembles are composed of simulations based on real reservoirs and the analysis impacts in their planning and management. Usually, the user selects a few models based on target percentiles, such as P10, P50 and P90, to make production predictions. If these models are selected in a way that they are not statistically representative, any decisions based on this analysis will be sub optimal, leading to decreased production and profitability.
+
+Any oil engineer tasked with the analysis of such models is benefitted from our research. Managers and planners that make production strategies and decisions that affect the fields are also benefitted by a higher quality representative model selection approach. If the technique is not specifically tied to the oil \& gas domain, other analysts with similar tasks may also benefit from our results. Anyone tasked with the analysis of very large bodies of data may find it easier to reduce the number of entities for analysis.
+
+Previous works suggests that the usual approaches for selecting a representative subset of models are inadequate or have poor computational efficiency. These approaches usually involve variants of clustering algorithms, such as kmeans and kmedoids, or even manual selection using tables with the values of the desired properties. Such approaches are highly dependant on the data being analyzed and the analyst's judgement, both of which can lead to poor choices of models. Because of this, there is a need for the development of better and more efficient approaches to acomplish such task.
+
+\end{document}
