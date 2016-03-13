@@ -1,0 +1,99 @@
+\documentclass[]{report}
+
+\title{INF-2710 Assignment 1: Reading In Depth}
+\author{Guilherme Gonçalves Schardong - 1412728}
+
+\begin{document}
+\maketitle
+
+\section{Paper Description}
+The paper chosen for this assignment is entitle: \textbf{Selecting Representative Models from a Large Set of Models}, with Pallav Sarma, Wen H. Chen and Jiang Xe as authors. The paper was presented in the 2013 edition of the Society of Petroleum Engineers' Reservoir Simulation Symposium.
+
+\section{Identificaton of elements based on the paper abstract}
+
+\begin{enumerate}
+\item Context of the problem: Oil companies are starting to adopt ensemble approaches to help the planning and decision making process for field management.
+\item Main research question: How can a statistically significant subset of models be selected from a large ensemble in an efficient, and potentially optimal manner?
+\item Research subquestions: N/A
+\item Proposed solution: A \textit{minimax} approach for selection of few reservoir models by matching the target percentiles (P10, P50 and P90 used in the paper) of multiple properties simultaneously.
+\item Results: When compared to the usual approaches for selection (clustering and manual selecting from Excel files), the proposed approach is computationally more efficient and the quality of the solution is higher.
+\end{enumerate}
+
+\section{Identification of text elements based on the introduction}
+
+\begin{enumerate}
+\item Context of the problem: There are several work-flows for reservoir management employed in oil companies and they are moving towards ensemble based approaches, where a very large number of models may be employed to quantify the uncertainty in their predictions.
+\item Main research question: Since working with possibly thousands of models is impossible, how can a subset of these models be selected, such that the decisions made using this subset can be generalized to the whole ensemble?
+\item Research subquestions: N/A
+\item Proposed solution: A \textit{minimax} algorithm to match the target percentiles of multiple properties, while obtaining maximally different models in the input uncertainty space. For smaller ensembles, the authors propose a global exhaustive search, while for larger ensembles, a greedy approach based on a Markov Chain Monte Carlo method is employed.
+\item Results: The proposed approach is computationally more efficient, and more importantly, obtains a better subset than the commonly employed approaches (clustering and manual selection).
+\end{enumerate}
+
+The Introduction section of the paper added more context to the problem and clarified the main research question. The proposed solution was also explained better when compared to the abstract, but it is not enough to reproduce the proposed approach yet. The results exposed in the introduction remained practically the same as the ones in the abstract. In both sections, there were no research subquestions.
+
+\section{Reverse outline}
+\subsection{Main point of each section}
+\begin{enumerate}
+\item Introduction: How can we select the statistically significant models from a large ensemble?
+\item The \textit{MiniMax} Algorithm for Model Selection: A combinatorial optimization approach to automatically select a subset of models.
+\item Application to a Real Dataset: How does our approach compares to the existing clustering and manual approaches in a real use-case scenario?
+\item Conclusions: Our approach is faster and accurately finds better models than the existing approaches.
+\end{enumerate}
+
+\subsection{Main point of each paragraph}
+\subsubsection{Introduction}
+Reservoir management work-flows are moving towards ensemble based approaches, where a large number of models are used. This makes the analysis and planning task an intractable one, making way for approaches to select a subset of this data for analysis.
+
+There are certain key percentiles used in the planning process, therefore, the developed approach must find the models closest to these percentiles given a set of properties.
+
+The approaches used by the oil industry are based on clustering algorithms or manual selection, this makes the process suboptimal and error prone.
+
+This model proposes a \textit{minimax} based approach for selection by modeling the problem as a combinatorial optimization one
+
+\subsubsection{The \textit{MiniMax} Algorithm for Model Selection}
+To select the representative models closest to the target percentiles with maximum spread in the uncertainty space, two optimization problems must be solved simultaneously, resulting in a complex multi-objective optimization problem.
+
+However, these problems can be modeled as a simpler one-objective problem.
+
+By defining the problem in a certain way, we can solve these problems in a sequential manner in a much simpler fashion
+
+For a small number of models, we can execute a global exhaustive search over the solution space and obtain the best possible subset of models.
+
+For medium to large problems, a Markov Chain Monte Carlo approach can be employed, however, it performs poorly when compared to the greedy algorithm proposed.
+
+The idea of the greedy algorithm is to solve for the models in a sequential manner, instead of simultaneously, therefore simplifying the task and scaling more effectively with the number of models.
+
+Since the greedy algorithm selects a small subset of models that match the percentiles, the problem of selecting the ones with highest spread in the uncertainty space can be solved by enumeration.
+
+\subsubsection{Application to a Real Dataset}
+Our approach is demonstrated in an ensemble of 841 models of 3 gas condensate reservoirs after the history matching process.
+
+The \textit{minimax} approach selects a better set of models that match the P10, P50 and P90 percentiles when compared to manual or clustering approaches.
+
+Both The \textit{minimax} and clustering approaches produce a set of models with good spread in the uncertainty space, while the manual approach does not perform so well.
+
+When selecting models that match several properties, the \textit{minimax} approach also outperforms clustering approaches.
+
+When comparing computational performance, the \textit{minimax} approach is orders of magnitude faster than a clustering approach.
+
+\subsubsection{Conclusions}
+Out approach proposes to solve a critical problem in the oil industry and, when compared to existing approaches, outperforms them in quality and computational performance.
+
+\subsection{Paper Structure Siscussion}
+The paper is generally well structured, with paragraphs in a logical order. After a careful reading, it seems that all paragraphs are relevant to their sections' main point. However, the authors used jargon specific to the area of application, besides using acronyms specific to a software product (IGIP1, IGIP2, w.r.t oil in place, WPC, OOIC, among others) for oil reservoir simulation, making difficult for a reader unfamiliar with the software to understand the work and model properties used.
+
+The paper also does not go in detail about the technique proposed, only explaining their goal and the general approach to solve the problem in case of small or large ensembles. This may be because the paper eventually generated a patent awarded to Chevron in 2015, therefore, the authors may have been prohibited from disclosing the full technique. This makes it difficult for other researchers to reproduce this work adequately and compare new approaches to approach proposed here.
+
+The figures used in the paper are of poor graphical quality (figures 1 and 2, for instance) or lack legends to explain the meaning of some graphical items used (figures 3, 4, 5, 6, 8, 9, 10, 11, 12, 13 and 14). Some symbols (Figures 11 and 12) are too small to see and the colors used have no meaning. Figure 15 presents a table comparing the time taken by the proposed algorithm and the clustering approach, however, it is not stated anywhere in the work if the time is the average time taken by N executions of each algorithm, or the slowest, or fastest execution.
+
+\section{Research Question Discussion}
+The goal of this research is to select a subset of models from a large ensemble. This subset must be statistically significant, meaning that any operations executed on them can be generalized to the whole ensemble.
+
+The problem of selecting this subset can be modeled as two separate optimization problems and they can be solved sequentially. However, is this approach better than the existing clustering algorithms? And if so, is it computationally faster? Both questions are clearly related to the goal and they are phrased in the work, though not explicitly.
+
+\section{Research Method Discussion}
+The authors follow a quantitative research method to solve their problem. They must prove that their algorithm outperforms others both in quality of the solution and in computational performance. To do so, they used statistical data obtained by measuring execution time of the approaches and visually comparing the solutions reported by the approaches tested. The research method followed is not stated anywhere in the paper, thus requiring the readers to guess it using the analysis of the results as a basis.
+
+Since the questions involve solution and algorithmic performance, it seems appropriate that the method to be adopted is a quantitative one. But, to fully prove the effectiveness of the approach proposed, the authors should have tested their approach in other datasets (or they should have reported their tests), and they could have made their approach clearer so that other researchers could verify their results.
+
+\end{document}
