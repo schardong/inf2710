@@ -1,0 +1,124 @@
+\documentclass{beamer}
+% 
+% Choose how your presentation looks.
+% 
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+% 
+\mode<presentation>
+{
+  \usetheme{Berlin}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage{default}
+%\usepackage[english]{babel}
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+%\usepackage{subfig}
+
+\graphicspath{{figures/}}
+\bibliographystyle{alpha}
+\renewcommand\bibfont{\scriptsize}
+
+%\captionsetup{compatibility=false}
+
+\title{Selecting Scenarios in Temporal Ensembles}
+\author{Guilherme Gon\c{c}alves Schardong}
+\date{\today}
+
+\begin{document}
+	
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Introduction}
+\begin{frame}
+  \tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}{Introduction}
+  \begin{itemize}
+    \item Increased use of ensemble based methods;
+    \item Difficulty to ``sift'' through this data and discover useful knowledge;
+    \item Need of approaches to make the amount of data more tractable;
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Research Questions}
+  \begin{itemize}
+    \item Given an ensemble of time series, how can we select a representative subset of them, such that analysis tasks done with the subset can be extended to the original set?
+    \item How can we evaluate the quality of the selection approach? Is there a way to evaluate it in the first place?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Objectives}
+  \begin{itemize}
+    \item Develop an approach to select representative time series from an ensemble;
+    \item Develop a visualization tool to help analyze the adherence of the ensemble's series compared to a reference series.
+  \end{itemize}
+\end{frame}
+
+\section{Literature Review}
+\begin{frame}
+  \tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\section{Case Study: UNISIM-I}
+\begin{frame}
+  \tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}{Ensemble Description}
+\end{frame}
+
+\begin{frame}{Score-based Selection}
+\end{frame}
+
+\begin{frame}{Brushing and Linking Selecion}
+\end{frame}
+
+\begin{frame}{MDS kNN Selection}
+\end{frame}
+
+\section{Discussion}
+\begin{frame}
+  \tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}{Discussion}
+\end{frame}
+
+\begin{frame}{Empirical percentiles selection}
+\end{frame}
+
+\section{Conclusions}
+\begin{frame}
+  \tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}{Conclusions}
+\end{frame}
+
+\begin{frame}{Future Work}
+\end{frame}
+
+\section{}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\end{document}
