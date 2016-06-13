@@ -96,16 +96,17 @@
   \begin{itemize}
     \item UNISIM-I: High quality synthetic model for testing reservoir management methods and algorithms;
     \item Base model contains 30 years worth of data: 20 years of historic data (sampled on a monthly basis) and 10 years of forecast data (sampled every 6 months);
-    \item Model contains 25 well: 14 producers and 11 injectors;
+    \item Model contains 25 wells: 14 producers and 11 injectors;
     \item Our analysis was focused on the oil production of the 14 producer wells.
   \end{itemize}
 \end{frame}
 
+\subsection{Score-based Selection}
 \begin{frame}{Score-based Selection}
   \begin{itemize}
     \item A ranking is done by ordering the distance of each time series to a reference curve at each time step;
     \item A score is attributed to each possible ranking (closer series will rank better, thus their score will be higher);
-    \item A weight can be attributed to each time step, so that time series with a better ranking at those time steps will score higher;
+    \item A weight factor can be assigned to each time step, so that time series with a better ranking at those time steps will score higher;
     \item The $k$ highest scored series are then selected as possible representatives;
   \end{itemize}
 \end{frame}
@@ -113,7 +114,7 @@
 \begin{frame}{Score-based Selection (P$_{10}$)}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{rank-fan-score-p10.pdf}
+    \includegraphics[width=0.9\columnwidth]{rank-fan-score-p10.pdf}
     \caption{Side-by-side rank and fan charts with the score selected curves highlighted. The selected models are UNISIM\_66, UNISIM\_156, UNISIM\_167, UNISIM\_87 and UNISIM\_54.}
     \label{fig:rank-fan-score-p10}
   \end{figure}
@@ -122,7 +123,7 @@
 \begin{frame}{Score-based Selection (P$_{50}$)}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{rank-fan-score-p50.pdf}
+    \includegraphics[width=0.9\columnwidth]{rank-fan-score-p50.pdf}
     \caption{Side-by-side rank and fan charts with the score selected curves highlighted. The selected models are UNISIM\_71, UNISIM\_30, UNISIM\_174, UNISIM\_45 and UNISIM\_135.}
     \label{fig:rank-fan-score-p50}
   \end{figure}
@@ -131,12 +132,13 @@
 \begin{frame}{Score-based Selection (P$_{90}$)}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{rank-fan-score-p90.pdf}
+    \includegraphics[width=0.9\columnwidth]{rank-fan-score-p90.pdf}
     \caption{Side-by-side rank and fan charts with the score selected curves highlighted. The selected models are UNISIM\_147, UNISIM\_58, UNISIM\_53, UNISIM\_186 and UNISIM\_111.}
     \label{fig:rank-fan-score-p90}
   \end{figure}
 \end{frame}
 
+\subsection{Brushing and Linking Selection}
 \begin{frame}{Brushing and Linking Selecion}
   \begin{itemize}
     \item Technique developed to link multiple views of the same data;
@@ -159,7 +161,7 @@
 \begin{frame}{Brushing and Linking Selecion (P$_{10}$)}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{rank-fan-brush-p10.pdf}
+    \includegraphics[width=0.9\columnwidth]{rank-fan-brush-p10.pdf}
     \caption{Side-by-side rank and fan charts with the manually selected curves highlighted. The selected models are UNISIM\_66, UNISIM\_159, UNISIM\_54, UNISIM\_156 and UNISIM\_167.}
     \label{fig:rank-fan-brush-p10}
   \end{figure}
@@ -168,7 +170,7 @@
 \begin{frame}{Brushing and Linking Selecion (P$_{50}$)}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{rank-fan-brush-p50.pdf}
+    \includegraphics[width=0.9\columnwidth]{rank-fan-brush-p50.pdf}
     \caption{Side-by-side rank and fan charts with the manually selected curves highlighted. The selected models are UNISIM\_194, UNISIM\_112, UNISIM\_197, UNISIM\_45 and UNISIM\_155.}
     \label{fig:rank-fan-brush-p50}
   \end{figure}
@@ -177,7 +179,7 @@
 \begin{frame}{Brushing and Linking Selecion (P$_{90}$)}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{rank-fan-brush-p90.pdf}
+    \includegraphics[width=0.9\columnwidth]{rank-fan-brush-p90.pdf}
     \caption{Side-by-side rank and fan charts with the manually selected curves highlighted. The selected models are UNISIM\_155 for P$_{50}$; and UNISIM\_186, UNISIM\_73, UNISIM\_147, UNISIM\_58 and UNISIM\_53.}
     \label{fig:rank-fan-brush-p90}
   \end{figure}
@@ -186,7 +188,7 @@
 \begin{frame}{Comparative MDS projections (P$_{10}$)}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{figures/mds-brush-score-p10.pdf}
+    \includegraphics[width=0.9\columnwidth]{figures/mds-brush-score-p10.pdf}
     \caption{Comparative MDS projections of the sets selected by the score and manual brushing approaches.}
     \label{fig:mds-plots}
   \end{figure}
@@ -195,7 +197,7 @@
 \begin{frame}{Comparative MDS projections (P$_{50}$)}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{figures/mds-brush-score-p50.pdf}
+    \includegraphics[width=0.9\columnwidth]{figures/mds-brush-score-p50.pdf}
     \caption{Comparative MDS projections of the sets selected by the score and manual brushing approaches.}
     \label{fig:mds-plots}
   \end{figure}
@@ -204,12 +206,13 @@
 \begin{frame}{Comparative MDS projections (P$_{90}$)}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{figures/mds-brush-score-p90.pdf}
+    \includegraphics[width=0.9\columnwidth]{figures/mds-brush-score-p90.pdf}
     \caption{Comparative MDS projections of the sets selected by the score and manual brushing approaches.}
     \label{fig:mds-plots}
   \end{figure}
 \end{frame}
 
+\subsection{MDS kNN Selection}
 \begin{frame}{MDS kNN Selection}
   \begin{itemize}
     \item By comparing the MDS projections of the models, both approaches leave some of the closest models out of the selection;
@@ -220,7 +223,7 @@
 \begin{frame}{MDS kNN Selection (P$_{10}$)}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{rank-fan-mds-sel-p10.pdf}
+    \includegraphics[width=0.9\columnwidth]{rank-fan-mds-sel-p10.pdf}
     \caption{Side-by-side rank and fan charts of the MDS projection selected curves. The selected models are UNISIM\_66, UNISIM\_159, UNISIM\_181, UNISIM\_54 and UNISIM\_156.}
     \label{fig:rank-fan-mds}
   \end{figure}
@@ -229,7 +232,7 @@
 \begin{frame}{MDS kNN Selection (P$_{50}$)}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{rank-fan-mds-sel-p50.pdf}
+    \includegraphics[width=0.9\columnwidth]{rank-fan-mds-sel-p50.pdf}
     \caption{Side-by-side rank and fan charts of the MDS projection selected curves. The selected models are UNISIM\_45, UNISIM\_69, UNISIM\_194, UNISIM\_112 and UNISIM\_110.}
     \label{fig:rank-fan-mds}
   \end{figure}
@@ -238,15 +241,16 @@
 \begin{frame}{MDS kNN Selection (P$_{90}$)}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{rank-fan-mds-sel-p90.pdf}
+    \includegraphics[width=0.9\columnwidth]{rank-fan-mds-sel-p90.pdf}
     \caption{Side-by-side rank and fan charts of the MDS projection selected curves. The selected models are UNISIM\_186, UNISIM\_73, UNISIM\_58, UNISIM\_147 and UNISIM\_53.}
     \label{fig:rank-fan-mds}
   \end{figure}
 \end{frame}
 
+\subsection{Case Study Results}
 \begin{frame}{Case Study Results}
   \begin{itemize}
-    \item For the P$_{10}$ and P$_{90}$ cases, the three approaches selected some models in common;
+    \item For the P$_{10}$ and P$_{90}$ cases, the three approaches selected several models in common;
     \item For the P$_{50}$ case, only the UNISIM\_45 model was selected by the three approaches;
     \item The MDS selection found models with the poorest ranking in the P$_{50}$ case, indicating that selecting the models by the smalles distance may not be a suitable approach;
     \item The score-based and brushing \& linking approaches selected models with good overall adherence to the reference percentiles. This is also true for the MDS selection, with the exception of the P$_{50}$ case.
@@ -266,6 +270,7 @@
   \end{itemize}
 \end{frame}
 
+\subsection{Empirical percentiles selection}
 \begin{frame}{Empirical percentiles selection}
   \begin{figure}[H]
     \centering
@@ -278,7 +283,7 @@
 \begin{frame}{Empirical percentiles selection (Rank and Fan charts P$_{10}$)}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{rank-fan-ecdf-p10.pdf}
+    \includegraphics[width=0.9\columnwidth]{rank-fan-ecdf-p10.pdf}
     \caption{Side-by-side rank and fan charts of the models selected using the cumulative probability distribution of the latest production values.}
     \label{fig:rank-fan-ecdf}
   \end{figure}
@@ -287,7 +292,7 @@
 \begin{frame}{Empirical percentiles selection (Rank and Fan charts P$_{50}$)}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{rank-fan-ecdf-p50.pdf}
+    \includegraphics[width=0.9\columnwidth]{rank-fan-ecdf-p50.pdf}
     \caption{Side-by-side rank and fan charts of the models selected using the cumulative probability distribution of the latest production values.}
     \label{fig:rank-fan-ecdf}
   \end{figure}
@@ -296,7 +301,7 @@
 \begin{frame}{Empirical percentiles selection (Rank and Fan charts P$_{90}$)}
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\columnwidth]{rank-fan-ecdf-p90.pdf}
+    \includegraphics[width=0.9\columnwidth]{rank-fan-ecdf-p90.pdf}
     \caption{Side-by-side rank and fan charts of the models selected using the cumulative probability distribution of the latest production values.}
     \label{fig:rank-fan-ecdf}
   \end{figure}
@@ -337,11 +342,13 @@
   \end{itemize}
 \end{frame}
 
+\subsection{Future Work}
 \begin{frame}{Future Work}
   \begin{itemize}
     \item Validate our method with expert users;
     \item Look for ways to include multiple properties to select models that are representative in several aspects;
-    \item Adapt the rank chart (if possible) to represent multivariate time series.
+    \item Adapt the rank chart (if possible) to represent multivariate time series;
+    \item Adapt the score selection to use pre simulation parameters.
   \end{itemize}
 \end{frame}
 
