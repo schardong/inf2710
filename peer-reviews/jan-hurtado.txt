@@ -1,0 +1,54 @@
+;; This buffer is for notes you don’t want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file’s own buffer.
+
+Jan HUrtado
+
+question 1
+7
+The author could have provided references to the applications of shape matching in the areas described in the first paragraph of the paper, this would have added to the motivation of this work. Some examples of problems that are solved, or partially solved by shape matching would have helped in this context.
+
+question 2
+8
+The author did demonstrate the originality of his results, however, in the conclusions, the author stated: "Our method nearly preserves the results of Pokrass et al."; I think an additional analysis is needed to determine how nearly the results are preserved. This way, it will be clear to the reader the benefits of the proposed approach compared to the one proposed by Pokrass et al.
+
+In general, a more thorough comparison of the proposed approach and the state of the art approaches is needed to better evaluate the results obtained.
+
+question 3
+7
+The contributions presented by the work benefits the international scientific community. The author extended a state-of-the-art shape matching framework to include partial shape matching and achieved better computational times.
+
+However, it is not made clear in the paper where the work of Pokrass et al. (main reference) stops and the conribution of this work begins, maybe a better comparison between both approaches would solve these issues.
+
+question 4
+6
+The methodology is not clearly described in the paper, but it seems to follow a quantitative approach for evaluating the results. The expected results were not described in the paper before the actual results.
+
+The adopted methodology seems adequate for addressing the problem of partial shape matching. Numerical and visual comparisons between the results of this work and previous works are adequate to evaluate the relevance of the results.
+
+question 5
+7
+The title reflects well the subject of the paper. However, it is not clear if the work encompasses piece-wise matching. In the last phrase of the conclusions the author wrote: "... finding piece-wise correspondences."; and this phrase may cast doubt on the reader. Maybe a better title would be: "Partial matching of non-rigid shapes using the Mumford-Shah functional and heat kernel signatures".
+
+The abstract states the goal of the work in a concise manner, as well as the main contribution. However, a preview of the results is not provided and it is unclear if the work achieved its goal or not (this would be useful for a reviewer in a conference or journal).
+
+In section 3.2, last paragraph before section 4, there is an undefined reference to a figure.
+Last paragraph of section 6: "Also, in Figure 6, we present the resulting error between them"; I think it should be Figure 7.
+
+The document contains some grammatical errors, but it did not affect the understanding of the work. There are minor concordance problems as well.
+
+The paper structure is logical, and progresses in a manner that explains the fundamentals of the problem, and the modifications employed by the author to achieve his goal, making it relatively easy to read. Some equations have an intuitive explanation, which greatly helps a reader not familiar with them.
+
+No layout problems were noticed.
+
+Overall score: 8
+How confident: 3
+
+Other comments:
+In the first paragraph, the author provides examples of areas of application for shape matching. However no references are provided. Maybe a computer vision evaluator would like to see the applications of shape matching in his area.
+
+In the second-to-last paragraph, the author says: "In this paper, we present an extension of the above framework"; It would be best to write in this way: "In this paper, we present an extension of the framework introduced by AUTHOR \cite{author-framework}...". In this way, the reader will know exactly who proposed the framework and it will be easier to look for the original work and compare the effectiveness and extent of the proposed approach.
+
+The \lambdas presented in section 3, equations 5 and 6 are the eigenvalues (as presented in section 2)? They were called parameters in section three and it is not clear if \lambda_r is the r-th eigenvalue or not. Maybe a change of notation can help.
+
+"equipped with a metric...": Is the term "equipped" the right way to say it? It sounds odd. (Not a criticism, just curiosity)
