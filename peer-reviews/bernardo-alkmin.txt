@@ -1,0 +1,45 @@
+bernardo
+
+question 1
+10
+The author found a good niche to develop his research. An inspection on the related works indicate so. Maybe a search on other sources of papers would yield more results?
+
+question 2
+10
+Even though there are no written results, the author's hypotheses seem well formulated and, apparently fill a gap in the current existing knowledge of Automated Theorem Provers.
+
+question 3
+9
+It seems that the results that can be achieved with this work are significant. Maybe other considerations will arise as the development goes, but the expected results seem sound.
+
+The work's contribution seems to be relevant for both the academic and corporate community as a way to validate the software being developed, besides unit testing. The practical results of this approach seem very good, but only an actual application of the method will show the benefits of natural language graph ATPs in software production environments.
+
+question 4
+10
+The methodology is clearly described and is adequate for the task at hand. The expected results are also well described and consistent with the methodology.
+
+question 5
+10
+The title is well suited to the paper. The abstract sumarizes the contents of the work very well. Only on typo was spotted (Section 2.2 - "discusses").
+
+Usually the term project patterns (padrões de projeto) is written as design patterns (paragraph 1 of the introduction).
+
+There are too many expressions in parenthesis and it makes the text harder to follow, as in: "In order to have a truly formal validation (something that is no widely utilized nowadays in Informatics, specially with agile methodologies and the need of constant and fast delivery of working software) of programs like these, just project patterns, unit testing, or similar techniques are not enough.". This expression may be replaced by: "Formal validation of complex programs is not commonplace, especially after the rise of agile software development methodologies. Techniques such as unit testing and design patterns, while helpful, are not enough to guarantee a good behavior of the system [reference here]."
+
+Section 2.1, second-to-last paragraph: "explode" sounds weird here, maybe another way to put it is: "... the number of sentences can grow exponentially."
+
+Section 2.2, last sentence of last paragraph: "discusses" should be "discussed".
+
+Section 2.4, second paragraph: remove the "magical" word, it may not be well received by a comission.
+
+Section 3: "In this chapter will be". In a way, the work is done, therefore, we don't usually refer to it in the future, because the paper is basically a report for work already completed. I would rewrite as: "This chapter presents the Systematic Mapping results...".
+
+In the presentation, it was suggested to make a plot with the papers per year per source data, this may greatly help someone that reads the report in order to choose the sources (maybe there were only 1 or 2 papers published about the theme in ACM, therefore, I will not spend too much time using it and focus on Scholar, which has 30 papers, for instance).
+
+Section 4.2: "As seen in the previous chapter, it will be implemented...". It? Maybe rewrite the subject here: "As seen in the previous chapter, our ATP will be implemented...".
+
+Also, there are several phrases in the form "As seen previously", "As seen the in previous chapter.". This makes the work a little bit difficult to follow, since the reader will have to go back and forth several times. Every chapter should be relatively self-contained. In case of references to other chapters, it is ideal to reference it directly and as specifically as possible: "As seen in Section 3.2.3.4, ...".
+
+Also, avoid references to parts of the work ahead of the current one: "We will see in Chapter 8...", but we are in Chapter 2, every part should be self-contained (within reason, of course).
+
+You used the term "assert" on Chapters 5 and 6. Usually we don't assert that our approach is better than the classic one, we verify if it is so or not. Assert is a very strong term for scientific works. Please, ask someone more experienced than I about this.
